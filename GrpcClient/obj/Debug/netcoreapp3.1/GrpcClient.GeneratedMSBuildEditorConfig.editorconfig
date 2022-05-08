@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = GrpcClient
+build_property.ProjectDir = C:\Users\admin\Desktop\Pastas e etc\c#\GrpcServer\GrpcClient\
