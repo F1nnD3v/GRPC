@@ -3,7 +3,17 @@ syntax = "proto3";
 option csharp_namespace = "GrpcServer";
 
 service Cliente{
-	rpc getClienteInfo(ClienteLookupModel) returns (ClienteModel);	
+	rpc getClienteInfo(ClienteLookupModel) returns (ClienteModel);
+	rpc getNovosClientes(getNovoClienteRequest) returns (stream ClienteModel);
+	rpc setNovosClientes(stream setNovoClienteRequest) returns (ClienteModel);
+}
+
+message setNovoClienteRequest{
+
+}
+
+message getNovoClienteRequest{
+
 }
 
 message ClienteLookupModel{

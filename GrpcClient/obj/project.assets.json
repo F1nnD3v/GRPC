@@ -338,24 +338,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\admin\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\35193\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\admin\\Desktop\\Pastas e etc\\c#\\GrpcServer\\GrpcClient\\GrpcClient.csproj",
+      "projectUniqueName": "C:\\Users\\35193\\Desktop\\pastas e etc\\c#\\GRPC\\GrpcClient\\GrpcClient.csproj",
       "projectName": "GrpcClient",
-      "projectPath": "C:\\Users\\admin\\Desktop\\Pastas e etc\\c#\\GrpcServer\\GrpcClient\\GrpcClient.csproj",
-      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\admin\\Desktop\\Pastas e etc\\c#\\GrpcServer\\GrpcClient\\obj\\",
+      "projectPath": "C:\\Users\\35193\\Desktop\\pastas e etc\\c#\\GRPC\\GrpcClient\\GrpcClient.csproj",
+      "packagesPath": "C:\\Users\\35193\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\35193\\Desktop\\pastas e etc\\c#\\GRPC\\GrpcClient\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\35193\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -406,6 +401,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[3.1.24, 3.1.24]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"

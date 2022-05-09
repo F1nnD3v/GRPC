@@ -49,6 +49,10 @@ namespace GrpcServer {
     static readonly grpc::Marshaller<global::GrpcServer.ClienteLookupModel> __Marshaller_ClienteLookupModel = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcServer.ClienteLookupModel.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::GrpcServer.ClienteModel> __Marshaller_ClienteModel = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcServer.ClienteModel.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::GrpcServer.getNovoClienteRequest> __Marshaller_getNovoClienteRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcServer.getNovoClienteRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::GrpcServer.setNovoClienteRequest> __Marshaller_setNovoClienteRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcServer.setNovoClienteRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::GrpcServer.ClienteLookupModel, global::GrpcServer.ClienteModel> __Method_getClienteInfo = new grpc::Method<global::GrpcServer.ClienteLookupModel, global::GrpcServer.ClienteModel>(
@@ -56,6 +60,22 @@ namespace GrpcServer {
         __ServiceName,
         "getClienteInfo",
         __Marshaller_ClienteLookupModel,
+        __Marshaller_ClienteModel);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::GrpcServer.getNovoClienteRequest, global::GrpcServer.ClienteModel> __Method_getNovosClientes = new grpc::Method<global::GrpcServer.getNovoClienteRequest, global::GrpcServer.ClienteModel>(
+        grpc::MethodType.ServerStreaming,
+        __ServiceName,
+        "getNovosClientes",
+        __Marshaller_getNovoClienteRequest,
+        __Marshaller_ClienteModel);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::GrpcServer.setNovoClienteRequest, global::GrpcServer.ClienteModel> __Method_setNovosClientes = new grpc::Method<global::GrpcServer.setNovoClienteRequest, global::GrpcServer.ClienteModel>(
+        grpc::MethodType.ClientStreaming,
+        __ServiceName,
+        "setNovosClientes",
+        __Marshaller_setNovoClienteRequest,
         __Marshaller_ClienteModel);
 
     /// <summary>Service descriptor</summary>
@@ -110,6 +130,26 @@ namespace GrpcServer {
       public virtual grpc::AsyncUnaryCall<global::GrpcServer.ClienteModel> getClienteInfoAsync(global::GrpcServer.ClienteLookupModel request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_getClienteInfo, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::GrpcServer.ClienteModel> getNovosClientes(global::GrpcServer.getNovoClienteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return getNovosClientes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::GrpcServer.ClienteModel> getNovosClientes(global::GrpcServer.getNovoClienteRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncServerStreamingCall(__Method_getNovosClientes, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncClientStreamingCall<global::GrpcServer.setNovoClienteRequest, global::GrpcServer.ClienteModel> setNovosClientes(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return setNovosClientes(new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncClientStreamingCall<global::GrpcServer.setNovoClienteRequest, global::GrpcServer.ClienteModel> setNovosClientes(grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncClientStreamingCall(__Method_setNovosClientes, null, options);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]

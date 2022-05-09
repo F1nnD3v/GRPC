@@ -49,6 +49,10 @@ namespace GrpcServer {
     static readonly grpc::Marshaller<global::GrpcServer.ClienteLookupModel> __Marshaller_ClienteLookupModel = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcServer.ClienteLookupModel.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::GrpcServer.ClienteModel> __Marshaller_ClienteModel = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcServer.ClienteModel.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::GrpcServer.getNovoClienteRequest> __Marshaller_getNovoClienteRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcServer.getNovoClienteRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::GrpcServer.setNovoClienteRequest> __Marshaller_setNovoClienteRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcServer.setNovoClienteRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::GrpcServer.ClienteLookupModel, global::GrpcServer.ClienteModel> __Method_getClienteInfo = new grpc::Method<global::GrpcServer.ClienteLookupModel, global::GrpcServer.ClienteModel>(
@@ -56,6 +60,22 @@ namespace GrpcServer {
         __ServiceName,
         "getClienteInfo",
         __Marshaller_ClienteLookupModel,
+        __Marshaller_ClienteModel);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::GrpcServer.getNovoClienteRequest, global::GrpcServer.ClienteModel> __Method_getNovosClientes = new grpc::Method<global::GrpcServer.getNovoClienteRequest, global::GrpcServer.ClienteModel>(
+        grpc::MethodType.ServerStreaming,
+        __ServiceName,
+        "getNovosClientes",
+        __Marshaller_getNovoClienteRequest,
+        __Marshaller_ClienteModel);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::GrpcServer.setNovoClienteRequest, global::GrpcServer.ClienteModel> __Method_setNovosClientes = new grpc::Method<global::GrpcServer.setNovoClienteRequest, global::GrpcServer.ClienteModel>(
+        grpc::MethodType.ClientStreaming,
+        __ServiceName,
+        "setNovosClientes",
+        __Marshaller_setNovoClienteRequest,
         __Marshaller_ClienteModel);
 
     /// <summary>Service descriptor</summary>
@@ -74,6 +94,18 @@ namespace GrpcServer {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task getNovosClientes(global::GrpcServer.getNovoClienteRequest request, grpc::IServerStreamWriter<global::GrpcServer.ClienteModel> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::GrpcServer.ClienteModel> setNovosClientes(grpc::IAsyncStreamReader<global::GrpcServer.setNovoClienteRequest> requestStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
@@ -82,7 +114,9 @@ namespace GrpcServer {
     public static grpc::ServerServiceDefinition BindService(ClienteBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_getClienteInfo, serviceImpl.getClienteInfo).Build();
+          .AddMethod(__Method_getClienteInfo, serviceImpl.getClienteInfo)
+          .AddMethod(__Method_getNovosClientes, serviceImpl.getNovosClientes)
+          .AddMethod(__Method_setNovosClientes, serviceImpl.setNovosClientes).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -93,6 +127,8 @@ namespace GrpcServer {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ClienteBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_getClienteInfo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcServer.ClienteLookupModel, global::GrpcServer.ClienteModel>(serviceImpl.getClienteInfo));
+      serviceBinder.AddMethod(__Method_getNovosClientes, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::GrpcServer.getNovoClienteRequest, global::GrpcServer.ClienteModel>(serviceImpl.getNovosClientes));
+      serviceBinder.AddMethod(__Method_setNovosClientes, serviceImpl == null ? null : new grpc::ClientStreamingServerMethod<global::GrpcServer.setNovoClienteRequest, global::GrpcServer.ClienteModel>(serviceImpl.setNovosClientes));
     }
 
   }

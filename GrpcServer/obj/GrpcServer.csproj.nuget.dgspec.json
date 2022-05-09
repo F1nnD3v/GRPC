@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin\\Desktop\\Pastas e etc\\c#\\GrpcServer\\GrpcServer\\GrpcServer.csproj": {}
+    "C:\\Users\\35193\\Desktop\\pastas e etc\\c#\\GRPC\\GrpcServer\\GrpcServer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin\\Desktop\\Pastas e etc\\c#\\GrpcServer\\GrpcServer\\GrpcServer.csproj": {
+    "C:\\Users\\35193\\Desktop\\pastas e etc\\c#\\GRPC\\GrpcServer\\GrpcServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Desktop\\Pastas e etc\\c#\\GrpcServer\\GrpcServer\\GrpcServer.csproj",
+        "projectUniqueName": "C:\\Users\\35193\\Desktop\\pastas e etc\\c#\\GRPC\\GrpcServer\\GrpcServer.csproj",
         "projectName": "GrpcServer",
-        "projectPath": "C:\\Users\\admin\\Desktop\\Pastas e etc\\c#\\GrpcServer\\GrpcServer\\GrpcServer.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Desktop\\Pastas e etc\\c#\\GrpcServer\\GrpcServer\\obj\\",
+        "projectPath": "C:\\Users\\35193\\Desktop\\pastas e etc\\c#\\GRPC\\GrpcServer\\GrpcServer.csproj",
+        "packagesPath": "C:\\Users\\35193\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\35193\\Desktop\\pastas e etc\\c#\\GRPC\\GrpcServer\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\35193\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
